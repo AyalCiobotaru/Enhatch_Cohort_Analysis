@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
-sns.set(style='white')
 
 pd.set_option('max_columns', 50)
 mpl.rcParams['lines.linewidth'] = 2
@@ -52,7 +51,7 @@ def cohort_stuff():
 
     plt.figure(figsize=(12, 8))
     plt.title('Cohorts: User Retention')
-    sns.heatmap(user_retention.T, mask=user_retention.T.isnull(), annot=True, fmt='.0%')
+    sns.heatmap(user_retention.T, mask=user_retention.T.isnull(), annot=True, fmt='.0%', cmap="Greens")
     plt.show()
 
 
